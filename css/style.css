@@ -1,0 +1,61 @@
+.user {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("/images/profile.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-position: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: none;
+}
+
+.user::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: black;
+  opacity: 70%;
+  border-radius: 50%;
+}
+
+img {
+  position: absolute;
+  z-index: 5;
+  width: 40px;
+  left: 50%;
+  top: 35%;
+  transform: translatex(-50%);
+}
+.progress-container {
+  width: 225px;
+  height: 25px;
+  margin-top: 25%;
+  background: rgb(34, 34, 34);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background: #a32318;
+  animation: load 3s ease-out 0.5s forwards;
+  border-radius: 20px;
+}
+
+@keyframes load {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
